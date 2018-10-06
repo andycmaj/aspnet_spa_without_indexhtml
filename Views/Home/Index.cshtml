@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <base href="http://localhost:5000/" />
+    <title>THIS IS THE PAGE THAT'S COPIED FROM INDEX.HTML</title>
+  </head>
+  <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <div id="root"></div>
+    <script type="text/javascript">
+        // here's where we can pass the viewmodel from the controller to the SPA
+        window.initialData = @Html.Raw(@JsonConvert.SerializeObject(@Model))
+    </script>
+    <script type="text/javascript" src="/static/js/bundle.js"></script>
+  </body>
+</html>
